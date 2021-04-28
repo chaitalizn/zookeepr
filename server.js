@@ -1,4 +1,4 @@
-const express = require('express');
+const express = require('express'); //this import the library
 const { animals } = require('./data/animals');
 
 const PORT = process.env.PORT || 3001;
