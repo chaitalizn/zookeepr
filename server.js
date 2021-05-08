@@ -1,3 +1,4 @@
+//const inquirer = require('inquirer');
 const express = require('express'); //this import the library
 const { animals } = require('./data/animals');
 
@@ -56,9 +57,9 @@ function filterByQuery(query, animalsArray) {
       res.json(results);
   });
 
-   app.get('/api/animals/:id', (req, res) => {
+  app.get('/api/animals/:id', (req, res) => {
     const result = findById(req.params.id, animals);
-      if (result) {
+    if (result) {
       res.json(result);
     } else {
       res.send(404);
